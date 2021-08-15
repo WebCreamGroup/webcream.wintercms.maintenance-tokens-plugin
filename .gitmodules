@@ -1,0 +1,3 @@
+[submodule "wintercms.docker"]
+	path = wintercms.docker
+	url = https://github.com/WebCreamGroup/wintercms.docker.git

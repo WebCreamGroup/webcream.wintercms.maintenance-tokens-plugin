@@ -1,0 +1,47 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    hint:
+        type: hint
+        path: ~/modules/cms/models/maintenancesetting/_hint.htm
+
+    is_enabled:
+        label: cms::lang.maintenance.is_enabled
+        comment: cms::lang.maintenance.is_enabled_comment
+        type: checkbox
+
+    cms_page:
+        type: dropdown
+        cssClass: checkbox-align
+
+    accessTokens:
+        type: repeater
+        label: Access tokens
+        prompt: Add new access token
+        style: collapsed
+        form:
+            fields:
+                isActive:
+                    type: switch
+                    label: Is active
+                    default: true
+                label:
+                    label: Label
+                token:
+                    label: Token
+                    required: true
+                activeFrom:
+                    label: Active from
+                    type: datepicker
+                    mode: datetime
+                    firstDay: 1
+                    span: auto
+                activeTo:
+                    label: Active to
+                    type: datepicker
+                    mode: datetime
+                    firstDay: 1
+                    span: auto
